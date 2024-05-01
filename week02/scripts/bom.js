@@ -9,7 +9,6 @@ button.addEventListener('click', function () {
         deleteButton.textContent = '❌';
         li.append(deleteButton);
         list.append(li);
-
         const deleteButton = document.createElement('button');
         deleteButton.addEventListener('click', function () {
             list.removeChild(li);
