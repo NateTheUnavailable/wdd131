@@ -29,7 +29,7 @@ body {
     margin: 0;
     font-size: 1.25rem;
     display: grid;
-    grid-template-columns: 12rem 1fr;
+    grid-template-columns: 20rem 1fr;
     background: var(--body-bg);
     gap: 1.5rem;
     color: white;
