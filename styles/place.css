@@ -1,6 +1,7 @@
 :root {
     --body-bg: #262626;
     --nav-bg: #255C99;
+    --fotter-bg: #254A73;
 }
 
 .container {
@@ -29,11 +30,29 @@ body {
     margin: 0;
     font-size: 1.25rem;
     display: grid;
-    grid-template-columns: 20rem 1fr;
     background: var(--body-bg);
-    gap: 1.5rem;
+    gap: 1.25rem;
     color: white;
     min-height: 100vh;
+}
+.info{
+    background-color: var(--fotter-bg);
+    display: grid;
+    grid-template-columns: 20rem;
+    margin-left: 30px;
+    background-color: var(--body-bg);
+}
+.info p{
+    display: grid;
+    width: 19rem;
+    background: var(--body-bg);
+    margin-bottom: 0;
+    text-align: right;
+}
+h1{
+    text-align: center;
+    border-radius: 15px 15px 2px 2px;
+    background-color: var(--fotter-bg);
 }
 
 h2 {
@@ -76,9 +95,9 @@ nav {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    background-color: #7EA3CC;
+    background-color: var(--fotter-bg);
     width: 100%;
     color: white;
     text-align: center;
