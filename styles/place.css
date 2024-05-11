@@ -17,8 +17,12 @@ p {
 .image{
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
-
+.icon{
+    display: block;
+    margin: auto;
+}
 * {
     box-sizing: border-box;
 }
@@ -44,7 +48,7 @@ body {
 }
 .info{
     position: absolute;
-    top: 120px;
+    top: 140px;
     left: 80px;
     background-color: rgb(201 27 27 / 50%);
     color: white;
