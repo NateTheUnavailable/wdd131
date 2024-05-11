@@ -13,9 +13,9 @@ p {
     overflow: hidden;
 }
 
-img {
-    float: left;
-    margin-right: 10px;
+.image{
+    display: flex;
+    justify-content: center;
 }
 
 * {
@@ -30,23 +30,47 @@ body {
     margin: 0;
     font-size: 1.25rem;
     display: grid;
-    background: var(--body-bg);
+    background-color: var(--body-bg);
     gap: 1.25rem;
     color: white;
     min-height: 100vh;
+    background-image: url("hero.webp") ;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    background-image: url("images\hero.webp");
 }
 .info{
-    background-color: var(--fotter-bg);
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    background-color: rgb(37 74 115 / 50%);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6vw 6vw 4px 4px;
+}
+.info2{
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    background-color: rgb(37 74 115 / 50%);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6vw 6vw 4px 4px;
+}
+.info2 p{
     display: grid;
-    grid-template-columns: 20rem;
-    margin-left: 30px;
-    background-color: var(--body-bg);
+    width: 19rem;
+    margin-bottom: 10px;
+    text-align: right;
 }
 .info p{
     display: grid;
-    width: 19rem;
-    background: var(--body-bg);
-    margin-bottom: 0;
+    width: 18rem;
+    margin-bottom: 10px;
     text-align: right;
 }
 h1{
@@ -58,7 +82,7 @@ h1{
 h2 {
     text-align: center;
     background-color: #255C99;
-    border-radius: 15px 15px 2px 2px;
+    border-radius: 5vw 5vw 2px 2px;
 }
 
 nav {
@@ -103,4 +127,7 @@ footer {
     text-align: center;
     padding: 16px;
     position: bottom;
+}
+@media only screen and (max-width: 700px){
+
 }
