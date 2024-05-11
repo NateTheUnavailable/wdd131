@@ -10,38 +10,61 @@
     <link rel="script" type="script" href="scripts/getdates.js">
     <script src="scripts\places.js" defer></script>
     <script src="scripts\getdates.js" defer></script>
-    <title>Home Weather</title>
+    <title>US Weather</title>
 </head>
 <body>
     <main>
-        <h1>Hazelton ID</h1>
+        <h1>United States</h1>
         <div class="image">
-            <img srcset="images\hero.webp 1100w, images\hero-small.webp 700w" sizes="(max-width: 1920px) 1100px, 700px">
+            <picture>
+                <source media="(min-width: 701px)" srcset="images/hero.webp 1800w">
+                <source media="(min-width: 400px)" srcset="images/hero-small.webp 3300w">
+                <img src="OtherImage.png" alt="IfItDoesntMatchAnyMedia">
+            </picture>
         </div>
             <div class="wrapper">
                 <div class="info">
                     <h2>Data</h2>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
+                    <p>Area: 3,796,742 sq mi</p>
+                    <p>Population: 334,914,895</p>
+                    <p>Capital: Washington, D.C</p>
+                    <p>Language: English</p>
+                    <p>Currency: U.S. dollar</p>
+                    <p>Time Zone: UTC−4 to −12, +10, +11</p>
+                    <p>Calling Code: +1</p>
+                    <p>Internet TLD: .us</p>
                 </div>
                 <div class="info2">
                     <h2>Weather</h2>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
-                    <p>Area:</p>
+                    <p>Temp: 17°C</p>
+                    <p>Cloud Cover: 21%</p>
+                    <p>Wind: 5 km/h</p>
+                    <p id="windChill">Wind Chill: °C</p>
+                </div>
+            </div>
+            <div>
+                <div class="more">
+                    <h2>Data</h2>
+                    <p>Area: 3,796,742 sq mi</p>
+                    <p>Population: 334,914,895</p>
+                    <p>Capital: Washington, D.C</p>
+                    <p>Language: English</p>
+                    <p>Currency: U.S. dollar</p>
+                    <p>Time Zone: UTC−4 to −12, +10, +11</p>
+                    <p>Calling Code: +1</p>
+                    <p>Internet TLD: .us</p>
+                </div>
+                <div class="more2">
+                    <h2>Weather</h2>
+                    <p>Temp: 17°C</p>
+                    <p>Cloud Cover: 21%</p>
+                    <p>Wind: 5 km/h</p>
+                    <p id="windChill2">Wind Chill: °C</p>
+                    <p>bruh</p>
                 </div>
             </div>
     </main>
     <footer id="footer">
     </footer>
 </body>
-<script src="scripts\getdates.js"></script>
-
 </html>
