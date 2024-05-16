@@ -12,10 +12,24 @@
         overflow: hidden;
     }
     .images {
-        float: left;
         margin-right: 10px;
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    }
+    .images section{
+        width: auto\9;
+        background-color:  rgb(54 54 54 / 50%);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .images p{
+        text-align: center;
+    }
+    .images h3{
+        text-align: center;
+    }
+    .images img{
+        text-align: center;
     }
     img {
         max-width: 100%;
@@ -86,9 +100,19 @@
         display: none;
     }
     .open .mobile_menu {
-        display:flex;
+        display:inline-block;
         flex-direction:column;
         align-items:center;
         justify-content: flex-start;
+        text-align: center;
+        padding: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .clear { 
+        clear: both; height: 60px; 
+    }
+    .label{
+        color:blueviolet;
     }
 }
