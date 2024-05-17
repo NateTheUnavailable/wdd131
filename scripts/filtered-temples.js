@@ -83,37 +83,41 @@ const temples = [
       "https://www.churchofjesuschrist.org/imgs/33e19ea3cba5f4aa250fab5e170af503d7bf667f/full/320%2C/0/default" 
     }
   ];
-createTempleCard();
-function createTempleCard() {
-  temples.forEach(temple => {
-    let card = document.createElement("section");
-    let name = document.createElement("h3");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
-    let area = document.createElement("p");
-    let img = document.createElement("img");
 
-    name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
+createTempleCard(temples);
 
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(img);
+const old = document.querySelector("#old")
+const newt = document.querySelector("#new")
+const small = document.querySelector("#small")
+const large = document.querySelector("#large")
 
-    document.querySelector(".images").appendChild(card);
-  });
-  }
-createTempleCard();
-const oldTemples = temples.filter(temple => !temple.dedication.includes())
+old.addEventListener("click", () =>{
+  const filteredTemples = temples
+  .filter(temple => new Date(temple.dedicated).getFullYear())
+  .sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
+  createTempleCard(filteredTemples);
+})
+newt.addEventListener("click", () =>{
+  const filteredTemples = temples
+  .filter(temple => new Date(temple.dedicated).getFullYear())
+  .sort((a, b) => new Date(b.dedicated) - new Date(a.dedicated));
+  createTempleCard(filteredTemples);
+})
+small.addEventListener("click", () =>{
+  const filteredTemples = temples
+  .filter(temple => new Date(temple.area).getFullYear())
+  .sort((a, b) => new Date(a.area) - new Date(b.area));
+  createTempleCard(filteredTemples);
+})
+large.addEventListener("click", () =>{
+  const filteredTemples = temples
+  .filter(temple => new Date(temple.area).getFullYear())
+  .sort((a, b) => new Date(b.area) - new Date(a.area));
+  createTempleCard(filteredTemples);
+})
   function createTempleCard(filteredTemples) {
-    temples.forEach(temple => {
+    document.querySelector(".images").innerHTML = ""
+    filteredTemples.forEach(temple => {
       let card = document.createElement("section");
       let name = document.createElement("h3");
       let location = document.createElement("p");
