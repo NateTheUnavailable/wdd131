@@ -93,25 +93,25 @@ const large = document.querySelector("#large")
 
 old.addEventListener("click", () =>{
   const filteredTemples = temples
-  .filter(temple => new Date(temple.dedicated).getFullYear())
+  .filter(temple => new Date(temple.dedicated).getFullYear() < 2000)
   .sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
   createTempleCard(filteredTemples);
 })
 newt.addEventListener("click", () =>{
   const filteredTemples = temples
-  .filter(temple => new Date(temple.dedicated).getFullYear())
+  .filter(temple => new Date(temple.dedicated).getFullYear() > 2000)
   .sort((a, b) => new Date(b.dedicated) - new Date(a.dedicated));
   createTempleCard(filteredTemples);
 })
 small.addEventListener("click", () =>{
   const filteredTemples = temples
-  .filter(temple => new Date(temple.area).getFullYear())
+  .filter(temple => new Date(temple.area).getFullYear() < 10000 )
   .sort((a, b) => new Date(a.area) - new Date(b.area));
   createTempleCard(filteredTemples);
 })
 large.addEventListener("click", () =>{
   const filteredTemples = temples
-  .filter(temple => new Date(temple.area).getFullYear())
+  .filter(temple => new Date(temple.area).getFullYear() > 90000 )
   .sort((a, b) => new Date(b.area) - new Date(a.area));
   createTempleCard(filteredTemples);
 })
