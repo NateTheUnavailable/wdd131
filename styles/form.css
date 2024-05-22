@@ -1,6 +1,4 @@
-
-@media only screen and (max-width: 700px){
-    :root {
+   :root {
         --body-bg: #262626;
         --nav-bg: #255C99;
     }
@@ -21,7 +19,6 @@
     p {
         overflow: hidden;
     }
-    
     h2 {
         text-align: center;
         background-color: #255C99;
@@ -95,4 +92,11 @@
     ul {
         list-style: none;
     }
-}
+    .container {
+        background-color: #262F39;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 400px;
+    }
