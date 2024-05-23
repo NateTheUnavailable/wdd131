@@ -130,7 +130,7 @@
         background-color: var(--body-bg);
     }
     .navbar a.active {
-        background-color: #264160;
+        background-color: #262F39;
         color: white;
     }
     :root {
