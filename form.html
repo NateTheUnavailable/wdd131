@@ -8,26 +8,33 @@
     <meta name="author" content="Nathaniel Gardner">
     <link rel="stylesheet" type="text/css" href="styles\form.css">
     <title>Product Review</title>
+    <nav>
+        <ul class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="">News</a>
+            <a href="">Contact</a>
+            <a href="index.html">About</a>
+        </ul>
+    </nav>
 </head>
 
 <body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="temples.html">Home</a></li>
+    <div id="hamburger" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile_menu">
+            <li><a class="active" href="#home">Home</a></li>
             <li><a href="">News</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="index.html">About</a></li>
         </ul>
-    </nav>
+    </div>
     <h1>Review Form</h1>
     <form action="review.html" method="GET">
         <p>Product Name</p>
         <select id="name" required>
             <option value="">Select a Product ...</option>
-            <option value="pencil">Pencil</option>
-            <option value="pen">Pen</option>
-            <option value="fountain">Fountain Pen</option>
-            <option value="mechanical">Mechanical Pencil</option>
         </select>
         <p>Overall Rating</p>
         <input type="radio" id="one">
@@ -69,4 +76,5 @@
 </body>
 <script src="scripts\form.js"></script>
 <script src="scripts\getdates.js"></script>
+<script src="scripts\temples.js"></script>
 </html>
