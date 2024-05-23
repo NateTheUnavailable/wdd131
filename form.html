@@ -19,26 +19,48 @@
             <li><a href="index.html">About</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h1>Product Review</h1>
-        <div class="rating">
-            <span id="rating">0</span>/5
-        </div>
-        <div class="stars" id="stars">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <p>Share your review:</p>
-        <textarea id="review"
-                  placeholder="Write your review here">
-          </textarea>
-        <button id="submit">Submit</button>
-        <div class="reviews" id="reviews">
-        </div>
-    </div>
+    <h1>Review Form</h1>
+    <form action="review.html" method="GET">
+        <p>Product Name</p>
+        <select id="name" required>
+            <option value="">Select a Product ...</option>
+            <option value="pencil">Pencil</option>
+            <option value="pen">Pen</option>
+            <option value="fountain">Fountain Pen</option>
+            <option value="mechanical">Mechanical Pencil</option>
+        </select>
+        <p>Overall Rating</p>
+        <input type="radio" id="one">
+        <label for="one">1★</label>
+        <input type="radio" id="two">
+        <label for="two">2★</label>
+        <input type="radio" id="three">
+        <label for="three">3★</label>
+        <input type="radio" id="four">
+        <label for="four">4★</label>
+        <input type="radio" id="five">
+        <label for="five">5★</label><br>
+        <p>Date Of Installation</p>
+        <input type="date" name="date"><br>
+        <p>What Features Did you find usefull in the product?</p>
+        <p>(Check all that apply)</p>
+        <input type="checkbox" name="durable" id="check">
+        <label for="durable" id="check">Durable</label><br>
+        <input type="checkbox" name="performance" id="check">
+        <label for="performance" id="check">Performance</label><br>
+        <input type="checkbox" name="design" id="check">
+        <label for="design" id="check">Design</label><br>
+        <input type="checkbox" name="quality" id="check">
+        <label for="quality" id="check">Quality</label><br>
+        <input type="checkbox" name="reliable" id="check">
+        <label for="reliable" id="check">Reliable</label><br>
+        <p>Written Review(Optional)</p>
+        <textarea id="w3review" name="w3review" rows="4" cols="50" >  
+        </textarea>
+        <p>Your Name (Optional)</p>
+        <input type="name" name="Uname"><br>
+        <input type="submit">
+    </form>
     <script src="script.js"></script>
     <main>
     </main>
